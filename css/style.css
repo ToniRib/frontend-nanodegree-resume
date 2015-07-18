@@ -118,7 +118,12 @@ Class Styles
   color: #999;
   line-height: 16px;
   float: right;
+}
 
+.desc-item {
+  padding: 2px 20px;
+  font-size: 14px;
+  list-style-type: square;
 }
 
 .welcome-message {

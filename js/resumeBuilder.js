@@ -176,21 +176,21 @@ var work = {
 			"employer": "Raytheon",
 			"dates": "August 2014 - present",
 			"location": "Aurora, CO",
-			"description": "Manage and verify requirements for science mission data on the Joint Polar Satellite System Common Ground System program."
+			"description": ["Program technical lead for the Space Link Extension protocol", "Technical lead for approved engineering estimate worth approximately $750k", "Led integration checkout for Space Link Extension non-nominal functionality", "Manage and verify requirements for science mission data on the Joint Polar Satellite System Common Ground System program", "Design and execute software tests to verify requirements"]
 		},
 		{
 			"title": "Systems & Software Safety Engineer",
 			"employer": "Raytheon",
 			"dates": "June 2013 - August 2014",
 			"location": "Aurora, CO",
-			"description": "Ensure the safety of the system by identifying hazards and implementing appropriate controls."
+			"description": ["Ensure the safety of the system by identifying hazards and implementing appropriate controls", "Chaired the System Safety Review Board", "Perform site safety assessments during hardware installations"]
 		},
 		{
 			"title": "Quality Engineer",
 			"employer": "Boeing",
 			"dates": "October 2011 - June 2013",
 			"location": "El Segundo, CA",
-			"description": "Ensure quality of the satellite by performing inspections and ensuring all processes are followed."
+			"description": ["Provide quailty metrics, nonconformance management, corrective action suport, test & area surveillance, and production support to satellite bus products laboratories", "Site administrator for online quality checklist system", "Boeing Best Practice site focal & Lean Manufacturing focal for the Manufacturing Self Examination initiative"]
 		}
 	]
 }
@@ -220,8 +220,11 @@ work.display = function() {
 		$('.work-entry:last').append(formattedWorkLocation);
 
 		// Add the job description to the work entry
-		var formattedWorkDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
-		$('.work-entry:last').append(formattedWorkDescription);
+		for (var item in work.jobs[job].description) {
+			var formattedWorkDescItem = HTMLworkDescItem.replace('%data%', work.jobs[job].description[item]);
+			$('.work-entry:last').append(formattedWorkDescItem);
+		}
+
 	}
 };
 
