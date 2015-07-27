@@ -12,8 +12,8 @@ var bio = {
 		"location": "Denver, CO"},
 	"welcomeMessage": "Changing the world, one website at a time.",
 	"skills": ["HTML", "CSS", "JavaScript", "R", "Git", "GitHub", "MATLAB"],
-	"bioPic": "images/cathat.jpg"
-}
+	"bioPic": "images/key-profile.jpg"
+};
 
 // Add a dipslay method for the object
 bio.display = function() {
@@ -117,7 +117,7 @@ var education = {
 			"url": "https://www.coursera.org/course/statinference"
 		}
 	]
-}
+};
 
 // Add a display method for the object
 education.display = function() {
@@ -193,7 +193,7 @@ var work = {
 			"description": ["Provide quailty metrics, nonconformance management, corrective action suport, test & area surveillance, and production support to satellite bus products laboratories", "Site administrator for online quality checklist system", "Boeing Best Practice site focal & Lean Manufacturing focal for the Manufacturing Self Examination initiative"]
 		}
 	]
-}
+};
 
 
 // Add a display method to the work object
@@ -245,7 +245,7 @@ var projects = {
 			"images": ["images/resize_blog.png"]
 		}
 	]
-}
+};
 
 // Add a display method to the object
 projects.display = function() {
